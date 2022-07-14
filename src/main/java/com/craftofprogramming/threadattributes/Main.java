@@ -1,4 +1,4 @@
-package com.craftofprogramming;
+package com.craftofprogramming.threadattributes;
 
 import java.util.concurrent.ThreadFactory;
 
@@ -136,7 +136,7 @@ public class Main {
     }
 
     // Part 6:
-    private static final class CountingThread extends Thread {
+    private static final class  CountingThread extends Thread {
         private long count = 0;
         private final int limit;
 
