@@ -1,5 +1,6 @@
 package com.craftofprogramming.threadattributes;
 
+import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
 
 public class Main {
@@ -7,6 +8,16 @@ public class Main {
         System.out.printf("%n'%s' Started%n", Thread.currentThread().getName());  // Part 1
         System.out.println("Hello world!");
         threadGroup(); // Part 2
+        System.out.println("Main.main");
+        if (true) {
+            System.out.println();
+        }
+        HashMap<Object, Object> m = new HashMap<>();
+        new HashMap<>();
+
+        if (true) {
+            System.out.println("Life is great!");
+        }
     }
 
     private static void threadGroup() throws InterruptedException, ExecutionException {
