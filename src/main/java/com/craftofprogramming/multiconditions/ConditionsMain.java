@@ -4,6 +4,20 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * This class demonstrates the use of Condition objects for managing concurrent access to a shared resource.
+ * It uses a Lock to ensure mutual exclusion when accessing the shared resource, which is an array of integers.
+ * The class defines two Condition objects: "canWrite" and "canRead", which are used to control access to the shared resource.
+ *
+ * <p>The canWrite condition is used to signal that a thread can write to the shared resource when it is not full.
+ * The canRead condition is used to signal that a thread can read from the shared resource when it is not empty.
+ *
+ * <p>The class also includes methods for writing to and reading from the shared resource, which use the lock to ensure mutual exclusion and the Condition objects to control access.
+ *
+ * <p>The main method of the class creates several threads that concurrently write to and read from the shared resource.
+ *
+ * @author CraftOfProgramming
+ */
 public class ConditionsMain {
     Lock lock = new ReentrantLock();
     Condition canWrite = lock.newCondition();

@@ -1,5 +1,19 @@
 package com.craftofprogramming.monitorwaitnotify;
 
+/**
+ * The {@code WaitNotifyMain} class demonstrates the use of {@code wait()} and {@code notify()} methods for managing concurrent access to a shared resource.
+ * It uses intrinsic locks (synchronized methods) to ensure mutual exclusion when accessing the shared resource, which is a counter.
+ *
+ * <p>The class includes two main methods:
+ * <ul>
+ *   <li>{@code read()} - This method is used by a consumer thread to read the counter value. If the counter value is not available (already read and not yet updated), the thread waits until it becomes available.</li>
+ *   <li>{@code increment()} - This method is used by a producer thread to increment the counter value. If the counter value is still available (not yet read), the thread waits until it has been read.</li>
+ * </ul>
+ *
+ * <p>The main method of the class creates a producer thread and a consumer thread that concurrently increment and read the counter value.
+ *
+ * @author CraftOfProgramming
+ */
 public class WaitNotifyMain {
     int counter;
     boolean isAvailable;

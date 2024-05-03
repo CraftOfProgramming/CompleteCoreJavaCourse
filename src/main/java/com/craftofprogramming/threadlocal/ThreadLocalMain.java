@@ -3,6 +3,25 @@ package com.craftofprogramming.threadlocal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * The {@code ThreadLocalMain} class demonstrates the use of {@code ThreadLocal} for creating thread-safe date formatters in Java.
+ * It uses a {@code SimpleDateFormat} instance stored in a {@code ThreadLocal} to ensure that each thread has its own instance of the formatter.
+ *
+ * <p>The class includes the following methods:
+ * <ul>
+ *   <li>{@code main()} - This is the entry point of the program. It creates two threads that continuously print the current date and time using the thread-safe date formatter.</li>
+ *   <li>{@code sleep()} - This method is used to pause the execution of a thread for a specified duration.</li>
+ * </ul>
+ *
+ * <p>The class also includes an inner class:
+ * <ul>
+ *   <li>{@code ThreadSafeDateFormatter} - This is a utility class that provides a thread-safe date formatter. It uses a {@code ThreadLocal} to store a {@code SimpleDateFormat} instance for each thread.</li>
+ * </ul>
+ *
+ * <p>The {@code main()} method demonstrates the use of the {@code ThreadSafeDateFormatter} by creating two threads that continuously print the current date and time.
+ *
+ * @author CraftOfProgramming
+ */
 public class ThreadLocalMain {
 
     public static void main(String[] args) throws InterruptedException {
