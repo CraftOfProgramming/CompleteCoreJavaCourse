@@ -1,6 +1,8 @@
 # CompleteCoreJavaCourse
 
-This project is a comprehensive guide to multithreading Java concepts for beginners. It includes several classes, each demonstrating a different aspect of Java's multithreading capabilities.
+This project is a comprehensive guide to core Java for complete beginners.
+As of now, it only includes multithreading Java concepts for beginners. 
+It includes several classes, each demonstrating a different aspect of Java's multithreading capabilities.
 
 ## Classes
 
